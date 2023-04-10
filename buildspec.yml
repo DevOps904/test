@@ -14,7 +14,7 @@ phases:
       - mkdir -p ./cbsample-$build_version/usr/lib
       - mkdir -p ./cbsample-$build_version/usr/include
       - mkdir -p ./cbsample-$build_version/usr/bin
-      - cp -f cbsample.control ./cbsample-$build_version/DEBIAN/control
+      - cp -f cbsample.control ./cbsample-$build_version/UBUNTU/control
   build:
     commands:
       - echo "Building the application"
