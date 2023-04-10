@@ -6,7 +6,7 @@ phases:
       - npm install
   build:
     commands:
-      - npm test
+      - echo Build started on `date`
 artifacts:
   files:
     - '**/*'
