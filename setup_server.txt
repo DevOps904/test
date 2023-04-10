@@ -1,0 +1,12 @@
+#!/bin/bash
+sudo su
+cd /var/www/html
+rm -rvf *
+echo -n "
+RewritEngine On
+#If an existing asset or directory is requested go to it as it is
+RewritCond %{DOCUMENT_ROOT}%{REQUEST_URI} -f [OR]
+RewriteCond %{DOCUMENT_ROOT}%{REQUEST_URI} -d
+Rewrite ^ - [L]
+Rewrite ^ /index.html
+" > /var/www/html/.htaccess
